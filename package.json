@@ -1,0 +1,8 @@
+{
+  "name": "retainai",
+  "private": true,
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "check": "echo \"OK (no code yet). Add real lint/typecheck/test later.\""
+  }
+}
