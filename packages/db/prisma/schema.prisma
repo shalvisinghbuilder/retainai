@@ -1,0 +1,193 @@
+// RetainAI Master Schema - 24hr Sprint Edition
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASEURL")
+}
+
+enum Role {
+  CANDIDATE
+  ASSOCIATE
+  MANAGER
+  ADMIN
+}
+
+enum CandidateStatus {
+  NEW
+  SCREENING
+  VJTPENDING
+  VJTPASSED
+  VJTFAILED
+  HIRED
+  REJECTEDCOOLDOWN
+}
+
+enum ScanType {
+  PICK
+  STOW
+  COUNT
+  ERRORLOG
+}
+
+enum AdaptType {
+  PRODUCTIVITY
+  QUALITY
+  ATTENDANCE
+}
+
+enum AdaptStatus {
+  PENDINGREVIEW
+  APPROVEDDELIVERED
+  EXEMPTED
+}
+
+model Candidate {
+  id             String          @id @default(uuid())
+  phone          String          @unique
+  name           String?
+  status         CandidateStatus @default(NEW)
+  sourceCode     String?         @map("sourcecode")
+  coolDownUntil  DateTime?       @map("cooldownuntil")
+
+  conversation       ConversationSession?
+  assessment         AssessmentResult?
+  employee           Employee?
+  eventRegistrations EventRegistration[]
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([status])
+  @@index([phone])
+  @@map("candidates")
+}
+
+model ConversationSession {
+  id           String  @id @default(uuid())
+  candidateId  String  @unique @map("candidateid")
+  currentState String  @map("currentstate")
+
+  candidate Candidate  @relation(fields: [candidateId], references: [id])
+  messages  MessageLog[]
+
+  @@map("conversationsessions")
+}
+
+model MessageLog {
+  id        String   @id @default(uuid())
+  sessionId String   @map("sessionid")
+  content   String
+  direction String   // INBOUND | OUTBOUND
+  timestamp DateTime @default(now())
+
+  session ConversationSession @relation(fields: [sessionId], references: [id])
+
+  @@index([sessionId, timestamp])
+  @@map("messagelogs")
+}
+
+model AssessmentResult {
+  id          String   @id @default(uuid())
+  candidateId String   @unique @map("candidateid")
+  skillScore  Float
+  passed      Boolean
+  completedAt DateTime @default(now())
+
+  candidate Candidate @relation(fields: [candidateId], references: [id])
+
+  @@map("assessmentresults")
+}
+
+model HiringEvent {
+  id            String  @id @default(uuid())
+  name          String
+  capacity      Int
+  date          DateTime
+  registrations EventRegistration[]
+
+  @@map("hiringevents")
+}
+
+model EventRegistration {
+  id          String @id @default(uuid())
+  eventId     String @map("eventid")
+  candidateId String @map("candidateid")
+  status      String // INVITED CONFIRMED ATTENDED
+
+  event     HiringEvent @relation(fields: [eventId], references: [id])
+  candidate Candidate   @relation(fields: [candidateId], references: [id])
+
+  @@unique([eventId, candidateId])
+  @@map("eventregistrations")
+}
+
+model Employee {
+  id          String @id @default(uuid())
+  badgeId     String @unique @map("badgeid")
+  candidateId String? @unique @map("candidateid")
+  role        Role   @default(ASSOCIATE)
+
+  candidate           Candidate?         @relation(fields: [candidateId], references: [id])
+  scans               ScanEvent[]
+  adaptRecords         AdaptRecord[]
+  sentimentResponses   SentimentResponse[]
+
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([badgeId])
+  @@map("employees")
+}
+
+model ScanEvent {
+  id              String   @id @default(uuid()) // client-generated eventId UUID
+  employeeId      String   @map("employeeid")
+  barcode         String
+  location        String
+  actionType      ScanType
+  timestamp       DateTime
+  expectedSeconds Float    @map("expectedseconds")
+  actualSeconds   Float?   @map("actualseconds")
+  isError         Boolean  @default(false)
+  errorCode       String?  @map("errorcode")
+  syncedAt        DateTime @default(now()) @map("syncedat")
+
+  employee Employee @relation(fields: [employeeId], references: [id])
+
+  @@index([employeeId, timestamp])
+  @@index([timestamp])
+  @@map("scanevents")
+}
+
+model AdaptRecord {
+  id              String     @id @default(uuid())
+  employeeId      String     @map("employeeid")
+  type            AdaptType
+  status          AdaptStatus @default(PENDINGREVIEW)
+  metricValue     Float      @map("metricvalue")
+  metricThreshold Float      @map("metricthreshold")
+  generatedAt     DateTime   @default(now()) @map("generatedat")
+  deliveredAt     DateTime?  @map("deliveredat")
+
+  employee Employee @relation(fields: [employeeId], references: [id])
+
+  @@index([employeeId, status])
+  @@map("adaptrecords")
+}
+
+model SentimentResponse {
+  id          String   @id @default(uuid())
+  employeeId  String   @map("employeeid")
+  questionId  String   @map("questionid")
+  score       Int
+  respondedAt DateTime @default(now()) @map("respondedat")
+
+  employee Employee @relation(fields: [employeeId], references: [id])
+
+  @@index([employeeId, respondedAt])
+  @@map("sentimentresponses")
+}
+

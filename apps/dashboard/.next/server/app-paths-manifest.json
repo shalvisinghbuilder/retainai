@@ -1,0 +1,6 @@
+{
+  "/api/floor-state/route": "app/api/floor-state/route.js",
+  "/api/adapt-queue/route": "app/api/adapt-queue/route.js",
+  "/api/login/route": "app/api/login/route.js",
+  "/page": "app/page.js"
+}

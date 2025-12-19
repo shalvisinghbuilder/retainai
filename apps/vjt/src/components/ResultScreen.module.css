@@ -1,0 +1,106 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 50px 40px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.successIcon,
+.failIcon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.successIcon {
+  background: #4caf50;
+  color: white;
+}
+
+.failIcon {
+  background: #f44336;
+  color: white;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.submessage {
+  font-size: 16px;
+  color: #999;
+  margin-top: 20px;
+}
+
+.cooldown {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.cooldownLabel {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.cooldownDate {
+  font-size: 20px;
+  font-weight: 600;
+  color: #667eea;
+}
+
+.completeMessage {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.completeMessage p {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 40px 30px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .message {
+    font-size: 16px;
+  }
+}
+

@@ -1,0 +1,561 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.0_react-dom@18.3.1_react@18.2.0__react@18.2.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.0_react-dom@18.3.1_react@18.2.0__react@18.2.0/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/LoginScreen.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.LoginScreen_container__bhJ_b {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.LoginScreen_card__8El3m {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.LoginScreen_title__HIvwr {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.LoginScreen_subtitle__BQg7X {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.LoginScreen_form__Cv2Bo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.LoginScreen_input__7l83d {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.LoginScreen_input__7l83d:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.LoginScreen_input__7l83d:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.LoginScreen_button__7XKo3 {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.LoginScreen_button__7XKo3:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+}
+
+.LoginScreen_button__7XKo3:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.LoginScreen_error__5Yt4v {
+  padding: 12px;
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 6px;
+  color: #c33;
+  font-size: 14px;
+}
+
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.0_react-dom@18.3.1_react@18.2.0__react@18.2.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.0_react-dom@18.3.1_react@18.2.0__react@18.2.0/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/MapScreen.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.MapScreen_container__fYLCQ {
+  min-height: 100vh;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.MapScreen_header__vpCYl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.MapScreen_title__LWx2C {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.MapScreen_actions__5Gjz5 {
+  display: flex;
+  gap: 10px;
+}
+
+.MapScreen_navButton__xznHj {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.MapScreen_navButton__xznHj:hover {
+  background: #5568d3;
+}
+
+.MapScreen_error__JrQwE {
+  padding: 12px;
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 6px;
+  color: #c33;
+  margin-bottom: 20px;
+}
+
+.MapScreen_mapContainer__jyndm {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.MapScreen_map__deeZ9 {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.MapScreen_workerDot__W8Q9V {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.MapScreen_workerDot__W8Q9V:hover {
+  transform: scale(1.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.MapScreen_legend__Rhlz4 {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.MapScreen_legendItem__Dw6gO {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.MapScreen_legendDot__3iSSh {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+.MapScreen_timestamp__Vlcon {
+  margin-left: auto;
+  font-size: 12px;
+  color: #999;
+}
+
+.MapScreen_modal__clRK5 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.MapScreen_modalContent__Vf7Lg {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.MapScreen_modalContent__Vf7Lg h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.MapScreen_modalContent__Vf7Lg p {
+  margin-bottom: 10px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.MapScreen_closeButton__mJ5lf {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.MapScreen_closeButton__mJ5lf:hover {
+  background: #5568d3;
+}
+
+.MapScreen_loading__3Shop {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .MapScreen_header__vpCYl {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .MapScreen_map__deeZ9 {
+    height: 400px;
+  }
+
+  .MapScreen_legend__Rhlz4 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .MapScreen_timestamp__Vlcon {
+    margin-left: 0;
+  }
+}
+
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.0_react-dom@18.3.1_react@18.2.0__react@18.2.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.0_react-dom@18.3.1_react@18.2.0__react@18.2.0/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/QueueScreen.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.QueueScreen_container__gULXD {
+  min-height: 100vh;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.QueueScreen_header__A6qx_ {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.QueueScreen_title__WmPFZ {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.QueueScreen_actions__NuGKL {
+  display: flex;
+  gap: 10px;
+}
+
+.QueueScreen_navButton__a1dBb {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.QueueScreen_navButton__a1dBb:hover {
+  background: #5568d3;
+}
+
+.QueueScreen_error__TOe0D {
+  padding: 12px;
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 6px;
+  color: #c33;
+  margin-bottom: 20px;
+}
+
+.QueueScreen_empty__WCW6_ {
+  background: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #666;
+}
+
+.QueueScreen_tableContainer__0MTpK {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.QueueScreen_table__MCOfi {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.QueueScreen_table__MCOfi thead {
+  background: #f5f5f5;
+}
+
+.QueueScreen_table__MCOfi th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+}
+
+.QueueScreen_table__MCOfi td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  color: #666;
+}
+
+.QueueScreen_table__MCOfi tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.QueueScreen_actionButtons__okY6N {
+  display: flex;
+  gap: 8px;
+}
+
+.QueueScreen_approveButton__hmyOQ,
+.QueueScreen_overrideButton__VeVhq {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.QueueScreen_approveButton__hmyOQ {
+  background: #4caf50;
+  color: white;
+}
+
+.QueueScreen_approveButton__hmyOQ:hover {
+  opacity: 0.8;
+}
+
+.QueueScreen_overrideButton__VeVhq {
+  background: #ff9800;
+  color: white;
+}
+
+.QueueScreen_overrideButton__VeVhq:hover {
+  opacity: 0.8;
+}
+
+.QueueScreen_modal__mYbI4 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.QueueScreen_modalContent__FWw35 {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.QueueScreen_modalContent__FWw35 h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.QueueScreen_modalContent__FWw35 p {
+  margin-bottom: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.QueueScreen_label__Yy3Qo {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.QueueScreen_textarea__4lA8v {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.QueueScreen_textarea__4lA8v:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.QueueScreen_modalActions__zntCU {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.QueueScreen_cancelButton___nc45,
+.QueueScreen_submitButton__ZXb_2 {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.QueueScreen_cancelButton___nc45 {
+  background: #999;
+  color: white;
+}
+
+.QueueScreen_cancelButton___nc45:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.QueueScreen_submitButton__ZXb_2 {
+  background: #667eea;
+  color: white;
+}
+
+.QueueScreen_submitButton__ZXb_2:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.QueueScreen_submitButton__ZXb_2:disabled,
+.QueueScreen_cancelButton___nc45:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.QueueScreen_loading__2DM5O {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .QueueScreen_table__MCOfi {
+    font-size: 12px;
+  }
+
+  .QueueScreen_table__MCOfi th,
+  .QueueScreen_table__MCOfi td {
+    padding: 8px;
+  }
+
+  .QueueScreen_actionButtons__okY6N {
+    flex-direction: column;
+  }
+
+  .QueueScreen_header__A6qx_ {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}
+
+
